@@ -9,7 +9,9 @@ const Nav = ({ categories }) => {
           <ul className="uk-navbar-nav">
             <li>
               <Link href="/">
-                <a>Toan Ho</a>
+              <a>
+                <span className="background-hover">Toan Ho</span>
+              </a>
               </Link>
             </li>
           </ul>
@@ -20,7 +22,11 @@ const Nav = ({ categories }) => {
               return (
                 <li key={category.id}>
                   <Link as={`/category/${category.slug}`} href="/category/[id]">
-                    <a className="uk-link-reset">{category.name}</a>
+                    <a className="uk-link-reset">
+                      <span className=" border-bottom-hover">
+                        {category.name}
+                      </span>
+                    </a>
                   </Link>
                 </li>
               );
